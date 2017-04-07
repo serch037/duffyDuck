@@ -1,0 +1,203 @@
+\documentclass[letterpaper, 12pt, oneside]{scrartcl}
+
+\usepackage{fancyhdr}
+\usepackage{extramarks}
+\usepackage{amsmath}
+\usepackage{amsthm, amssymb}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage[plain]{algorithm}
+\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage{microtype}
+\usepackage{lmodern}
+\setmainfont[Ligatures=TeX, SmallCapsFont={* Caps}, SlantedFont={* Slanted},
+ItalicFeatures ={
+  SmallCapsFont = {LMRomanCaps10-Oblique}
+}]{Latin Modern Roman}
+\setsansfont{Latin Modern Sans}
+\setmonofont{Latin Modern Mono}
+\setmathfont{Latin Modern Math}
+\usetikzlibrary{automata,positioning}
+
+%
+% Basic Document Settings
+%
+
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+\linespread{1.1}
+
+\pagestyle{fancy}
+% \lhead{\hmwkAuthorName}
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle}
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{\thepage}
+
+\renewcommand\headrulewidth{0.4pt}
+\renewcommand\footrulewidth{0.4pt}
+
+\setlength\parindent{0pt}
+
+%
+% Create Problem Sections
+%
+
+\newcommand{\enterProblemHeader}[1]{
+    \nobreak\extramarks{}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+}
+
+\newcommand{\exitProblemHeader}[1]{
+    \nobreak\extramarks{Problem \arabic{#1} (continued)}{Problem \arabic{#1} continued on next page\ldots}\nobreak{}
+    \stepcounter{#1}
+    \nobreak\extramarks{Problem \arabic{#1}}{}\nobreak{}
+}
+
+\setcounter{secnumdepth}{0}
+\newcounter{partCounter}
+\newcounter{homeworkProblemCounter}
+\setcounter{homeworkProblemCounter}{1}
+\nobreak\extramarks{Problem \arabic{homeworkProblemCounter}}{}\nobreak{}
+
+%
+% Homework Problem Environment
+%
+% This environment takes an optional argument. When given, it will adjust the
+% problem counter. This is useful for when the problems given for your
+% assignment aren't sequential. See the last 3 problems of this template for an
+% example.
+%
+\newenvironment{homeworkProblem}[1][-1]{
+    \ifnum#1>0
+        \setcounter{homeworkProblemCounter}{#1}
+    \fi
+    \section{Problem \arabic{homeworkProblemCounter}}
+    \setcounter{partCounter}{1}
+    \enterProblemHeader{homeworkProblemCounter}
+}{
+    \exitProblemHeader{homeworkProblemCounter}
+}
+
+%
+% Homework Details
+%   - Title
+%   - Due date
+%   - Class
+%   - Section/Time
+%   - Instructor
+%   - Author
+%
+
+\newcommand{\hmwkTitle}{Project 1}
+\newcommand{\hmwkDueDate}{April 7, 2017}
+\newcommand{\hmwkClass}{Calculus II}
+% \newcommand{\hmwkClassTime}{Section A}
+\newcommand{\hmwkClassInstructor}{Adrian Ulises Soto}
+\newcommand{\hmwkAuthorName}{\textbf{Sergio Ugalde Marcano} \and \textbf{Davis
+    Josh} \and \textbf{Sergio Ugalde Marcano} \and \textbf{Sergio Ugalde Marcano}  }
+
+%
+% Title Page
+%
+
+\title{
+    \vspace{2in}
+    \textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+    \normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate\ }\\
+    \vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+    \vspace{3in}
+}
+
+\author{\hmwkAuthorName}
+\date{}
+
+\renewcommand{\part}[1]{\textbf{\large Part \Alph{partCounter}}\stepcounter{partCounter}\\}
+
+%
+% Various Helper Commands
+%
+
+% Useful for algorithms
+\newcommand{\alg}[1]{\textsc{\bfseries \footnotesize #1}}
+
+% For derivatives
+\newcommand{\deriv}[1]{\frac{\mathrm{d}}{\mathrm{d}x} (#1)}
+
+% For partial derivatives
+\newcommand{\pderiv}[2]{\frac{\partial}{\partial #1} (#2)}
+
+% Integral dx
+\newcommand{\dx}{\mathrm{d}x}
+
+% Alias for the Solution section header
+\newcommand{\solution}{\textbf{\large Solution}}
+
+% Probability commands: Expectation, Variance, Covariance, Bias
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+\newcommand{\Bias}{\mathrm{Bias}}
+
+\begin{document}
+
+\maketitle
+
+\pagebreak
+
+\begin{homeworkProblem}
+Choose a profile picture, which can be scanned from a drawing or desinged entirely on a computer. Each drawing must be
+unique and must be approved before proceeding to continue the project. The drawing must have an axis of symmetry.
+The design must be such that an application of Simpson's rule can be used to approximate the several integrals. Pixelated
+desings are also possible. The boundary must be a simple closed curve with (no holes, no self-crossing).
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+  Choose a particular scale, origin and coordinate axes for your drawing.
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+  Numerically, and an approximation to the area of your drawing using Simpson's rule and the Trapezoidal rule. If your
+drawing allows it, and an exact answer also.
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+ Numerically, and an approximation of the perimeter of your drawing approximating it using straight lines and adding the
+length.
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+  Choose an axis parallel to the axis of symmetry of your gure on which you will revolve your figure to produce a life saver
+with your figure as profile
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+  Investigate Pappus' Theorem for solids of Revolution, and use it to
+  \begin{enumerate}[label=\alph*)]
+  \item Compute the volume of the resulting solid of revolution.
+  \item Compute the surface area of the resulting solid of revolution
+  \end{enumerate}
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+ Investigate Arquimedes' Theorem to And the boyance force of the life saver assuming it is completely submerged in water,
+and is filled with air.
+\end{homeworkProblem}
+
+\begin{homeworkProblem}
+  Using Simpson's rule, and the volume of the solid of revolution without using Pappus' Theorem.
+\end{homeworkProblem}
+
+
+\begin{homeworkProblem}
+  Make a real design of your life saver. You may 3d print it if you wish.
+\end{homeworkProblem}
+
+\end{document}
