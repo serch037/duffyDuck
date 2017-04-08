@@ -269,20 +269,106 @@ First we present the samples and their respective heights:
   \item Compute the volume of the resulting solid of revolution.
   \item Compute the surface area of the resulting solid of revolution
   \end{enumerate}
+\\
+  \textbf{Solution}\\
+  \textbf{Volume of solid of revolution}\\
+  From Pappus, we know that:
+  \begin{align*}
+    V &= 2 \pi r A
+  \end{align*}
+  Where $V$ is the volume, $r$ is the distance from the axis to the centroid and $A$ is the area of
+  the region.
+  Therefore, substituting, we get
+  \begin{align*}
+    V &\approx 2 \pi\times 45\times562\\
+      &\approx 158901.756
+  \end{align*}
+  Thus the volume is approximately equal to $158901.8cm^3$\\
+  \textbf{Surface area}\\
+  From Pappus, we know that
+  \begin{align*}
+    S &= 2 \pi r L
+  \end{align*}
+  Where $S$ is the surface area, $r$ is the distance from the axis to the centroid and $L$ is the perimeter of
+  the region.
+  Therefore, substituting, we get
+  \begin{align*}
+    S &\approx 2 \pi 45 \times 120\\
+      &\approx 33929.2
+  \end{align*}
+  Thus the surface is approximately equal to $33929.2cm^2$\\
 \end{homeworkProblem}
 
 \begin{homeworkProblem}
- Investigate Arquimedes' Theorem to And the boyance force of the life saver assuming it is completely submerged in water,
- and is filled with air.
+ Investigate Arquimedes' Theorem to And the buoyance force of the life saver assuming it is completely submerged in water,
+ and is filled with air.\\\\
+
+ \textbf{Solution}
+ According to Archimedes' buoyancy principle, the  buoyant force is defined as:
+ \begin{align*}
+  \text{Buoyant Force} &= \text{weight of displaced liquid}\\
+   F &= mg = \rho V g
+ \end{align*}
+ Where $m$ is the mass of the displaced liquid, $g$ is the force of gravity, V
+ is the volume of the displaced liquid and \rho is the density of the liquid.
+
+ Therefore, substituting (assuming a density of seawater of 1.025 kg/L and a
+ value for $g$ of 9.81) we have
+ \begin{align*}
+  F &\approx  1.05 \times 562 \times 9.81\\
+    &5788.881
+ \end{align*}
+
+ Thus the buoyant force is equal to 5788.881 Newtons.
 \end{homeworkProblem}
 
 \begin{homeworkProblem}
-  Using Simpson's rule, and the volume of the solid of revolution without using Pappus' Theorem.
+  Using Simpson's rule, and the volume of the solid of revolution without using
+  Pappus' Theorem.\\\\
+  \textbf{Solution}
+  In order to find the volume of revolution using Simpon's rule, we are going to
+  use the shell method.
+
+  First we find the volume of a single cylinder (at $x_3$):
+  \begin{align*}
+   V &= 2 \pi (x) (f(u) - f(b)) \Delta x
+  \end{align*}
+  Where $x$ is the radius, $u$ is the upper
+  bound, $b$ is the lower bound and \Delta x the thickness of the shell.
+
+  Substituting we have
+  \begin{align*}
+    V &\approx 2 \ pi (39) (19.5) (3)\\
+      &\approx 14335.08
+  \end{align*}
+
+  And an approximation to the volume would be:
+  \begin{align*}
+    V &\approx \sum_{j=0}^{10}2 \pi (x_j) (f(u_j) - f(b_j)) \Delta x
+  \end{align*}
+
+  Which would give us a result of:
+  \begin{align*}
+    V \approx & 2 \pi \times 3 \times (33\times16.5+36\times19+39\times19.5+42\times19.5+45\times19.5+48\times19.5+\\
+    &51\times19.5+54\times19+57\times16.5+60\times21)\\
+      \approx &166677.198
+  \end{align*}
+
+  Thus our approximations yields a volume of $166677.198cm^3$
+
 \end{homeworkProblem}
 
 
 \begin{homeworkProblem}
   Make a real design of your life saver. You may 3d print it if you wish.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth, height=12cm, keepaspectratio]{3d}
+  \caption{3D Design}
+  \label{fig3}
+\end{figure}
+
+
 \end{homeworkProblem}
 
 \end{document}
