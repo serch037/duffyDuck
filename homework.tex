@@ -205,16 +205,39 @@ First we present the samples and their respective heights:
   \includegraphics[width=\textwidth, height=12cm, keepaspectratio]{Fixed2_1}
   \caption{Cross section with measurements}
   \label{fig3}
+\end{figure}
 
-  \textbf{Trapezoidal rule}
+\textbf{Trapezoidal rule}\\
+  By definition, we know that the Trapezoid rule has the following form:
+  \begin{equation}
+    \int_{a}^{b}f(x)dx\approx\frac{h}{2}[f(x_0)+2f(x_1)+f(x_2)+fx(_3)+\dots+2f(x_{n-1})+f(x_n)]
+  \end{equation}
+  Thus, substituting our measurements we get:
+\begin{align*}
+  \int_{a}^{b}f(x)dx&\approx\frac{3}{2}[21+2\times16.5+19+2\times19.5+19.5+\\
+                    &2\times19.5+19.5+2\times19.5+19+2\times16.5+21]\\
+    &\approx\frac{3}{2}[302]\\
+    &\approx 453
+   \end{align*}
+
+   This the approximation of the area via the trapezoid rule is $Area \approx 453cm^2$
 
   \textbf{Simpon's method}
+  \\
   By definition, we know that Simpon's method has the following form:
   \begin{equation}
-    Sn=\frac{3}{h}[f(x_0)+4f(x_1)+2f(x_2)+4fx(_3)+\dots+4f(x_{n-3})+2f(x_{n-2})+4f(x_{n-1})+f(x_n)]
+    \int_{a}^{b}f(x)dx\approx\frac{3}{h}[f(x_0)+4f(x_1)+2f(x_2)+4fx(_3)+\dots+4f(x_{n-3})+2f(x_{n-2})+4f(x_{n-1})+f(x_n)]
   \end{equation}
+  And substituting with our measurements:
 
-\end{figure}
+  \begin{align*}
+    \int_{a}^{b}f(x)dx&\approx\frac{3}{3}[21+4\times16.5+2\times19+4\times19.5+2\times19.5\\
+    &\approx+4\times19.5+2\times19.5+4\times19.5+2\times19+4\times16.5+21]\\
+    &\approx\frac{3}{3}[562]\\
+    &\approx 562
+   \end{align*}
+
+   This the approximation of the area via Simpon's method is $Area \approx 562cm^2$
 
 \end{homeworkProblem}
 
@@ -222,8 +245,8 @@ First we present the samples and their respective heights:
  Numerically, and an approximation of the perimeter of your drawing approximating it using straight lines and adding the
  length.
  \\\\
- \textbf{Solution}
- From \ref{fig3}, we can see that from our 16 measurements, we can approximate
+ \textbf{Solution}\\
+ From Figure \ref{fig3}, we can see that from our 16 measurements, we can approximate
  the perimeter as the sum:
  \[
    P = 21 + 7 + 3.5 + 3 + 12 + 3 + 3.5 + 7 + 21 + 7 + 3.5 + 3 + 12 + 3 + 3.5
@@ -234,7 +257,10 @@ First we present the samples and their respective heights:
 
 \begin{homeworkProblem}
   Choose an axis parallel to the axis of symmetry of your figure on which you will revolve your figure to produce a life saver
-with your figure as profile.
+  with your figure as profile.\\\\
+  \textbf{Solution}\\
+  We have choosen the axis as the axis of revolution $x = 0$, therefore according to our diagram we have an
+  inner radius of 30cm and an outer radius  of 60cm.
 \end{homeworkProblem}
 
 \begin{homeworkProblem}
@@ -247,7 +273,7 @@ with your figure as profile.
 
 \begin{homeworkProblem}
  Investigate Arquimedes' Theorem to And the boyance force of the life saver assuming it is completely submerged in water,
-and is filled with air.
+ and is filled with air.
 \end{homeworkProblem}
 
 \begin{homeworkProblem}
